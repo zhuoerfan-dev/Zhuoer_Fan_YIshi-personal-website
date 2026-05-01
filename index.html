@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhuoer_Fan's Portfolio</title>
+    <!-- 链接 CSS 样式表 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <span class="logo">😋 My Portfolio</span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#game">Game</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="image-box">
+      <img src="https://i.postimg.cc/4dKXQLSY/Screenshot-2026-04-28-at-10-34-50-AM.png" alt="Me" class="profile-img">
+      <span class="emoji-badge">👋</span>
+    </div>
+    <div class="hero-text">
+      <h1>Hi, I'm <span class="accent">Zhuoer_Fan</span></h1>
+      <p class="tagline" id="typewriter"></p>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  
+  <section id="about" class="card">
+    <h2>About Me 🙋‍♂️</h2>
+    <p>
+      Hello! I am a Chinese student who has just come here in recent years. Besides my main studies, I mainly focus on art🎨, computer science💻, piano🎹, golf⛳️, etc. 
+        
+  
+
+      I am constantly learning more about technology and innovation. I hope you can get to know me better through this website. Thank you! 👍
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects 🛠️</h2>
+    <div class="grid">
+      <div class="project-card">
+        <h3>Cool Project #1</h3>
+        <p>A 2D game made in Scratch, similar to "Combine Watermelon". Combine fruits to get a high score! 🐱</p>
+        <div class="project-footer">
+          <span class="tech-tag">2D Scratch</span>
+          <a href="https://scratch.mit.edu/projects/1312680112/" target="_blank" class="view-link">View Project →</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Cool Project #2</h3>
+        <p>A 3D Creaticode parkour game. Avoid the lava and reach the final platform to win! 🔥</p>
+        <div class="project-footer">
+          <span class="tech-tag">3D Creaticode</span>
+          <a href="https://play.creaticode.com/projects/69b2d8a30fc2c13d26d33d2a?version=draft" target="_blank" class="view-link">View Project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="card">
+    <h2>Skills</h2>
+    <div class="skills-flex">
+      <span class="skill-pill">HTML/CSS</span>
+      <span class="skill-pill">JavaScript</span>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">Scratch</span>
+      <span class="skill-pill">Problem Solving</span>
+    </div>
+  </section>
+
+  <section id="experience" class="card">
+    <h2>Experience</h2>
+    <div class="timeline-item">
+      <h4>School Tech Club</h4>
+      <p>Project finished 2025 - Present</p>
+      <ul>
+        <li>Completed the MIT challenge related to environmental protection.</li>
+        <li>Developed engineering notebooks and two corresponding games.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="game" class="card">
+    <h2>Snake Game 🐍</h2>
+    <p>Use <b>W, A, S, D</b> to control the snake! Eat the red food.</p>
+    <div class="game-container">
+      <canvas id="snakeGame" width="400" height="400"></canvas>
+      <div class="game-info">
+        <p>Score: <span id="game-score">0</span></p>
+        <button id="restart-btn">Restart Game</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="card">
+    <h2>Contact</h2>
+    <p>If connect ， You can find me here:</p>
+    <div class="contact-links">
+      <p>Email: <a href="mailto:zhuoer_fan@s.thevillageschool.com">zhuoer_fan@s.thevillageschool.com</a></p>
+      <p>GitHub: <a href="#">@zhuoerfan-dev</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026/4/23 Designed with by Zhuoer_Fan</p>
+</footer>
+
+<!-- 链接 JavaScript 脚本 -->
+<script src="script.js"></script>
+</body>
+</html>

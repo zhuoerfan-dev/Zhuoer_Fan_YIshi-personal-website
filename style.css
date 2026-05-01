@@ -1,0 +1,123 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #fdfcf0;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  overflow-x: hidden; /* 防止动画溢出产生滚动条 */
+}
+/* --- 导航栏 --- */
+nav {
+  background: #2d3436;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { color: white; font-weight: bold; font-size: 1.2rem; }
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+}
+.nav-links a:hover { color: #FFDEAD; }
+.nav-links a::after {
+  content: ''; position: absolute; width: 0; height: 2px;
+  bottom: -5px; left: 0; background-color: #FFDEAD; transition: 0.3s;
+}
+.nav-links a:hover::after { width: 100%; }
+/* --- Hero 区域 (炫酷打字机 & 闪烁光标) --- */
+.hero {
+  background: linear-gradient(135deg, #FFDEAD, #f5d4a1);
+  color: #5d4037;
+  padding: 120px 20px;
+  text-align: center;
+}
+.tagline { font-size: 1.2rem; font-weight: 500; }
+.cursor {
+  font-weight: bold;
+  color: #5d4037;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.profile-img {
+  width: 150px; height: 150px;
+  border-radius: 50%; border: 5px solid white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+.profile-img:hover { transform: rotate(5deg) scale(1.1); }
+/* --- 滚动显示动画 (Reveal) --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* --- 卡片设计 --- */
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.4s ease;
+}
+.card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+h2 { border-bottom: 3px solid #FFDEAD; display: inline-block; margin-bottom: 20px; }
+/* --- 项目网格 --- */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.project-card {
+  background: white;
+  border-top: 5px solid #FFDEAD;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.project-card:hover { transform: scale(1.03); background: #fffdfa; }
+.view-link { color: #d4a373; text-decoration: none; font-weight: bold; }
+.tech-tag { font-size: 0.75rem; background: #FFDEAD; color: #5d4037; padding: 4px 12px; border-radius: 20px; font-weight: bold; }
+/* --- 技能标签 --- */
+.skill-pill {
+  background: #fff9ed; padding: 10px 20px; border-radius: 25px;
+  margin: 6px; display: inline-block; font-weight: bold; color: #d4a373;
+  transition: 0.3s; cursor: default;
+}
+.skill-pill:hover { background: #FFDEAD; color: #5d4037; transform: scale(1.15) rotate(2deg); }
+/* --- 游戏增强 --- */
+.game-container { display: flex; flex-direction: column; align-items: center; margin-top: 20px; }
+canvas { 
+  background: #2d3436; 
+  border: 4px solid #FFDEAD; 
+  border-radius: 12px; 
+  box-shadow: 0 0 25px rgba(255, 222, 173, 0.4); 
+  max-width: 100%; 
+}
+#restart-btn {
+  background: #FFDEAD; color: #5d4037; border: none;
+  padding: 12px 30px; border-radius: 30px; cursor: pointer;
+  font-weight: bold; transition: 0.3s; margin-top: 15px;
+}
+#restart-btn:hover { background: #f5d4a1; transform: translateY(-3px) scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+footer { text-align: center; padding: 60px 20px; color: #636e72; background: #fffdf5; }
